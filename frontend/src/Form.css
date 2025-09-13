@@ -1,0 +1,92 @@
+/* Form.css */
+
+/* Fullscreen takeover for auth page */
+.page-container {
+  position: fixed;       /* cover entire screen */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(180deg, #222831, #393E46);
+  z-index: 9999; /* sits on top of theme background */
+  font-family: "Segoe UI", sans-serif;
+}
+
+.form-box {
+  background: #EEEEEE;
+  border-radius: 15px;
+  padding: 2rem;
+  width: 400px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  color: #222831;
+  animation: fadeIn 0.8s ease;
+}
+
+.form-box h2 {
+  margin-bottom: 1rem;
+  color: #222831;
+}
+
+.form-box input {
+  width: 100%;
+  padding: 0.8rem;
+  margin: 0.5rem 0;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  font-size: 1rem;
+}
+
+.form-box input:focus {
+  border-color: #00ADB5;
+  box-shadow: 0 0 6px rgba(0, 173, 181, 0.8);
+}
+
+.form-box button {
+  margin-top: 1rem;
+  padding: 0.8rem;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  background: #00ADB5;
+  color: #EEEEEE;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form-box button:hover {
+  background: #008c92;
+  transform: scale(1.03);
+}
+
+.form-box p {
+  margin-top: 1rem;
+  cursor: pointer;
+  color: #00ADB5;
+  font-weight: 500;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* make input and button same size */
+.form-box input, .form-box button {
+    width: 100%; /* full width of container */
+    box-sizing: border-box; /* include padding + border in width */
+}

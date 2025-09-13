@@ -1,0 +1,218 @@
+.chat-page {
+  display: flex;
+}
+
+.chat-container {
+  min-width: 50vw;
+  max-width: 700px;
+  min-height: 50vh;
+  margin: 0 auto;
+  padding: 20px 25px;
+  font-family: Arial, sans-serif;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.chat-box {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  min-height: 300px;
+  max-height: 60vh; /* limit height so input stays visible */
+
+}
+
+.chat-box::-webkit-scrollbar {
+  width: 8px;
+}
+
+.chat-box::-webkit-scrollbar-thumb {
+  background-color: rgba(123, 104, 238, 0.3);
+  border-radius: 4px;
+}
+
+.chat-message {
+  margin-bottom: 18px;
+  word-wrap: break-word;
+}
+
+.chat-message strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* AI message background */
+.chat-message.assistant {
+  background: #f5f5f5;
+  border-radius: 8px;
+  padding: 10px 14px;
+}
+
+.chat-message strong {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.input-box {
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 5px;
+  padding: 14px 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.input-box:focus {
+  border-color: #7b68ee;
+  box-shadow: 0 0 5px rgba(123, 104, 238, 0.4);
+}
+
+.chat-text {
+  margin-top: 8px;
+  line-height: 1.6;
+  font-size: 15px;
+  color: #222;
+}
+
+/* Headings in AI response */
+.chat-text h1, .chat-text h2, .chat-text h3 {
+  font-weight: bold;
+  margin-top: 1em;
+  margin-bottom: 0.4em;
+}
+
+.chat-text h1 {
+  font-size: 1.5em;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 4px;
+}
+
+.chat-text h2 {
+  font-size: 1.3em;
+}
+
+.chat-text h3 {
+  font-size: 1.15em;
+}
+
+/* Paragraphs */
+.chat-text p {
+  margin: 0.5em 0;
+}
+
+/* Bullet & Numbered Lists */
+.chat-text ul, .chat-text ol {
+  padding-left: 1.5em;
+  margin: 0.6em 0;
+}
+
+.chat-text li {
+  margin: 0.4em 0;
+}
+
+/* Bold text */
+.chat-text strong {
+  font-weight: bold;
+}
+
+/* Sidebar tweaks */
+.chat-sessions-sidebar {
+  width: 250px;
+  background: #f7f7f8;
+  border-right: 1px solid #ddd;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+
+.chat-sessions-sidebar h3 {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+
+.chat-sessions-sidebar li:hover {
+  background-color: #e4e4e7;
+}
+
+
+  .sidebar-menu {
+  position: relative;
+  margin-top: auto;
+  padding: 10px;
+}
+
+.menu-button {
+  width: 100%;
+  padding: 8px;
+  cursor: pointer;
+  background: #ddd;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.menu-dropup {
+  position: absolute;
+  bottom: 50px; /* sits above the button */
+  left: 0;
+  width: 100%;
+  background: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  padding: 10px;
+  display: none; /* hidden by default */
+  flex-direction: column;
+  gap: 8px;
+  animation: slideUp 0.2s ease-out;
+}
+
+.menu-dropup.open {
+  display: flex; /* only shows when state = open */
+}
+
+.menu-dropup a,
+.menu-dropup .logout-button {
+  background: none;
+  border: none;
+  color: blue;
+  cursor: pointer;
+  text-align: left;
+  padding: 4px 0;
+  font-size: 14px;
+}
+
+.menu-dropup a:hover,
+.menu-dropup .logout-button:hover {
+  text-decoration: underline;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

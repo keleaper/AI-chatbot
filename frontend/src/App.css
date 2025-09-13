@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  text-align: center;
+  min-height: 100vh;
+  padding: 20px;
+  position: relative;
+}
+
+.chat-sessions-sidebar {
+  display: flex;
+  flex-direction: column;
+}
+
+#light {
+  background-color: #f3ebf6;
+}
+
+#dark {
+  background-color: #313131;
+}
+
+#light .chat-container {
+  background-color: #fff;
+}
+
+#dark .chat-container {
+  background-color: #292929;
+}
+
+#dark .chat-title {
+  color: #fff;
+}
+
+#dark .chat-sessions-sidebar {
+  color: #fff;
+}
+
+body.chat-container {
+  width: 700px;
+  height: 100vh;
+
+  border-radius: 1.5em;
+  box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+}
+
+.switch {
+  /*position, top, right allow for the button to be in the top right */
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0px; /* Space between label and switch */
+  margin: 24px auto 0 auto; /* Add margin above, center horizontally */;
+}
+
+.switch label {
+  margin: 10px;
+  font-size: 1em;
+  font-weight: 500;
+}
+
+#light .switch label {
+  color: black;
+}
+
+#dark .switch label {
+  color: white;
+}
+
+

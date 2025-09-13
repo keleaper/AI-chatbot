@@ -1,0 +1,34 @@
+# Ignore .env file (contains secrets like API keys)
+.env
+
+# Build Folders
+bin/
+obj/
+
+# Rider project files
+.idea/
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Visual Studio Code settings
+.vscode/
+
+# ASP.NET secrets
+secrets.json
+
+# Backup files
+*.bak
+
+# Publish output
+publish/
